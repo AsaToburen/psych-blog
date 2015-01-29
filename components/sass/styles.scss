@@ -1,0 +1,257 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+ 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+a {
+	text-decoration: none;
+	color: #333332;
+}
+
+ 
+/* HTML5 display-role reset for older browsers */
+ 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+ 
+body {
+  line-height: 1; }
+ 
+ol, ul {
+  list-style: none; }
+ 
+blockquote, q {
+  quotes: none; }
+ 
+blockquote {
+  &:before, &:after {
+    content: '';
+    content: none; } }
+ 
+q {
+  &:before, &:after {
+    content: '';
+    content: none; } }
+ 
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+
+//descriptive variables:
+$offwhite: rgb(253,253,253);
+$azul: #4F7CAC;
+$flat-green: rgb(111, 181, 175);
+$black: #162521;
+$font-black: #353535;
+$medium-font: #333332;
+$char-green: #3C474B;
+$light-blue: #BFD7EA;
+$mute-maroon: #565264; 
+
+$heading-font: 'Lato', sans-serif;
+
+
+//functional variables:
+
+
+/* Global Styles */
+
+body {
+	background-color: $offwhite;
+	width: 100%;
+	overflow: auto;
+	box-sizing: border-box;
+}
+	header {
+		background-color: $flat-green;
+		width: 100%;
+		display: block;
+		font-family: $heading-font;
+		position: relative;
+		border-bottom: 5px solid $char-green;
+		.inner-header {
+			margin: 0 auto;
+			width: 80%;
+				span {
+					display: inline-block;
+					width: 20%;
+					text-align: center;
+					padding: .2em 0em;
+					border: 1px solid #fff;
+					background-color: $flat-green;
+					&:hover {
+						background: radial-gradient(circle, $flat-green, $offwhite);
+						h1 {
+							color: $char-green;
+							text-shadow: $offwhite;
+						}
+					}
+					a {
+						margin: 0 auto;
+						h1 {
+							font-size: 2em;
+							position: relative;
+							top: 1.2em;
+							left: .15em;
+							color: $offwhite;
+							height: 0;
+						}
+						img {
+							width: 50%;
+						}
+					}
+				}
+		nav {
+			float: right;
+			display: inline;
+			margin-right: -1em;
+			ul{
+				float: left;
+				li {
+					display: inline;
+					color: $black;
+					font-size: 1.375em;
+					a {
+						display: inline-block;
+						padding: .4em;
+						margin-top: 2.2em;
+						margin-left: .5em;
+						text-transform: uppercase;
+						&:hover {
+							color: $offwhite;
+						}
+					}
+				}
+			}
+			}
+		}
+	}
+
+
+
+	.sidebar {
+		width: 16.07%;
+		margin-left: 10.02%;
+		font-family: lucida grande;
+		display: inline-block;
+		ul{
+			>li {
+				margin-top: 0;
+				padding-top: .5em;
+			}
+			li{
+				font-size: 1.375em;
+				background-color: $azul;
+				padding-left: 1em;
+
+				padding-bottom: .5em;
+				a {
+					-webkit-transition: .5s ease-in-out;
+					transition: .5s ease-in-out;
+					padding: .5em 3.5em .5em 0em;
+				}
+				&:hover {
+						-webkit-transition: .7s ease-in-out;
+						transition: .7s ease-in-out;
+						background-color: $offwhite;
+					a {
+						color: $azul;
+						-webkit-transition: .5s ease-in-out;
+						transition: .5s ease-in-out;
+						padding-left: 1%;
+					}
+				}
+
+			}
+		}
+	}
+
+	.blog-banner {
+			border: 1px solid black;
+			background-color: $offwhite;
+			overflow: auto;
+			position: relative;
+			height: 40rem;
+			width: 73.7%;
+			float: right;
+			.entry-container {
+				width: 100%;
+				height: 50em;
+				overflow: auto;
+				.b-post {
+					width: 95%;
+					height: 22%;
+					border: 2px solid black;
+					overflow: hidden;
+					background: linear-gradient(to top, rgba($char-green, .1), $offwhite); 
+					z-index: 5;
+					.post-title {
+						font-family: lucida grande, sans-serif;
+						margin-left: 4%;
+						margin-top: 2%;
+						padding-bottom: 2.7%;
+						font-size: 1.5em;
+					}
+					.entry-text{
+						width: 80%;
+						line-height: 1.7em;
+						padding-left: 6%; 
+						overflow: auto;
+					}
+				}
+			}
+	}
+
+	.main-banner {
+			background-image: url('../images/KittPeak_stars.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center middle;
+			overflow: auto;
+			position: relative;
+			width: 100%;
+			height: 40em;
+			border-bottom: 3rem solid $flat-green;
+			div {
+				margin: 10em auto 0 auto;
+				width: 60%;
+				height: 40%;
+				color: #1d1e21;
+				text-align: center;
+				
+				h1 {
+					font-size: 4em;
+					color: $offwhite;
+					font-family: $heading-font bold;
+					line-height: 1.3em;
+					letter-spacing: .05em;
+				}
+			}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
